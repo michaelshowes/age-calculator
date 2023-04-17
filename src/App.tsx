@@ -6,16 +6,20 @@ import { useState } from 'react';
 import FormInput from './components/FormInput';
 
 type FormData = {
-	years: number;
-	months: number;
-	days: number;
+	years: number | null;
+	months: number | null;
+	days: number | null;
 };
 
 export default function App() {
 	const [day, setDay] = useState<number | null>(null);
 	const [month, setMonth] = useState<number | null>(null);
 	const [year, setYear] = useState<number | null>(null);
-	const [age, setAge] = useState<FormData>({ years: 0, months: 0, days: 0 });
+	const [age, setAge] = useState<FormData>({
+		years: null,
+		months: null,
+		days: null
+	});
 
 	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();

@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 type Props = {
 	age: {
-		years: number;
-		months: number;
-		days: number;
+		years: number | null;
+		months: number | null;
+		days: number | null;
 	};
 };
 
